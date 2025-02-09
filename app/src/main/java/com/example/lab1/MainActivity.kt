@@ -20,7 +20,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Email
 import androidx.compose.material.icons.rounded.Phone
 import androidx.compose.material.icons.rounded.Share
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -40,10 +39,24 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Lab1Theme {
-                Surface(
-                    modifier = Modifier.fillMaxSize()
+                Box(modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color(0xFFD2E8D4))
                 ) {
-                    Title(name = "Владислав Некрасов", title = "Студент ИжГТУ")
+                    Title(
+                        name = "Владислав Некрасов",
+                        title = "Студент ИжГТУ",
+                        modifier = Modifier.align(Alignment.Center)
+                    )
+                    Contacts(
+                        phone = "+00 (00) 000 000",
+                        handle = "@socialmediahandle",
+                        email = "email@domail.com",
+                        modifier = Modifier
+                            .align(Alignment.BottomCenter)
+                            .width(IntrinsicSize.Max)
+                            .padding(bottom = 24.dp)
+                    )
                 }
             }
         }
