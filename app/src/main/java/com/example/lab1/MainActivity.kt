@@ -132,7 +132,9 @@ fun Contacts(phone: String, handle: String, email: String, modifier: Modifier = 
     ) {
         Row(
             horizontalArrangement = Arrangement.Start,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 8.dp)
         ) {
             Icon(
                 imageVector = Icons.Rounded.Phone,
@@ -145,7 +147,9 @@ fun Contacts(phone: String, handle: String, email: String, modifier: Modifier = 
         }
         Row(
             horizontalArrangement = Arrangement.Start,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 8.dp)
         ) {
             Icon(
                 imageVector = Icons.Rounded.Share,
@@ -158,7 +162,8 @@ fun Contacts(phone: String, handle: String, email: String, modifier: Modifier = 
         }
         Row(
             horizontalArrangement = Arrangement.Start,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
         ) {
             Icon(
                 imageVector = Icons.Rounded.Email,
