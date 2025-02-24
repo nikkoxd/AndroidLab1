@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
                         name = "Владислав Некрасов",
                         title = "Студент ИжГТУ",
                         modifier = Modifier
-                            .weight(5f)
+                            .weight(1f)
                             .align(Alignment.CenterHorizontally)
                     )
                     Contacts(
@@ -55,7 +55,6 @@ class MainActivity : ComponentActivity() {
                         handle = "@socialmediahandle",
                         email = "email@domail.com",
                         modifier = Modifier
-                            .weight(1f)
                             .align(Alignment.CenterHorizontally)
                             .width(IntrinsicSize.Max)
                             .padding(bottom = 24.dp)
@@ -78,7 +77,7 @@ fun CardPreview() {
                 name = "Владислав Некрасов",
                 title = "Студент ИжГТУ",
                 modifier = Modifier
-                    .weight(5f)
+                    .weight(1f)
                     .align(Alignment.CenterHorizontally)
             )
             Contacts(
@@ -86,7 +85,6 @@ fun CardPreview() {
                 handle = "@socialmediahandle",
                 email = "email@domail.com",
                 modifier = Modifier
-                    .weight(1f)
                     .align(Alignment.CenterHorizontally)
                     .width(IntrinsicSize.Max)
                     .padding(bottom = 24.dp)
