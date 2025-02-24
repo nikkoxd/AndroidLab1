@@ -39,21 +39,24 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Lab1Theme {
-                Box(modifier = Modifier
+                Column(modifier = Modifier
                     .fillMaxSize()
                     .background(Color(0xFFD2E8D4))
                 ) {
                     Title(
                         name = "Владислав Некрасов",
                         title = "Студент ИжГТУ",
-                        modifier = Modifier.align(Alignment.Center)
+                        modifier = Modifier
+                            .weight(5f)
+                            .align(Alignment.CenterHorizontally)
                     )
                     Contacts(
                         phone = "+00 (00) 000 000",
                         handle = "@socialmediahandle",
                         email = "email@domail.com",
                         modifier = Modifier
-                            .align(Alignment.BottomCenter)
+                            .weight(1f)
+                            .align(Alignment.CenterHorizontally)
                             .width(IntrinsicSize.Max)
                             .padding(bottom = 24.dp)
                     )
@@ -67,21 +70,24 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun CardPreview() {
     Lab1Theme {
-        Box(modifier = Modifier
+        Column(modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFD2E8D4))
         ) {
             Title(
                 name = "Владислав Некрасов",
                 title = "Студент ИжГТУ",
-                modifier = Modifier.align(Alignment.Center)
+                modifier = Modifier
+                    .weight(5f)
+                    .align(Alignment.CenterHorizontally)
             )
             Contacts(
                 phone = "+00 (00) 000 000",
                 handle = "@socialmediahandle",
                 email = "email@domail.com",
                 modifier = Modifier
-                    .align(Alignment.BottomCenter)
+                    .weight(1f)
+                    .align(Alignment.CenterHorizontally)
                     .width(IntrinsicSize.Max)
                     .padding(bottom = 24.dp)
             )
