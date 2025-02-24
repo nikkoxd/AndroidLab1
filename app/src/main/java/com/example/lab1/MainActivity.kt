@@ -20,6 +20,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Email
 import androidx.compose.material.icons.rounded.Phone
 import androidx.compose.material.icons.rounded.Share
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -41,7 +42,7 @@ class MainActivity : ComponentActivity() {
             Lab1Theme {
                 Column(modifier = Modifier
                     .fillMaxSize()
-                    .background(Color(0xFFD2E8D4))
+                    .background(MaterialTheme.colorScheme.background)
                 ) {
                     Title(
                         name = "Владислав Некрасов",
@@ -102,7 +103,7 @@ fun Title(name: String, title: String, modifier: Modifier = Modifier) {
         modifier = modifier
     ) {
         Box(
-            modifier = Modifier.background(Color(0xFF073042))
+            modifier = Modifier.background(MaterialTheme.colorScheme.surfaceContainer)
         ) {
             Image(
                 painter = image,
@@ -115,13 +116,14 @@ fun Title(name: String, title: String, modifier: Modifier = Modifier) {
             fontSize = 32.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Light,
+            color = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.padding(vertical = 8.dp)
         )
         Text(
             text = title,
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFF00602A),
+            color = MaterialTheme.colorScheme.primary,
             textAlign = TextAlign.Center,
         )
     }
@@ -142,11 +144,13 @@ fun Contacts(phone: String, handle: String, email: String, modifier: Modifier = 
         ) {
             Icon(
                 imageVector = Icons.Rounded.Phone,
+                tint = MaterialTheme.colorScheme.primary,
                 contentDescription = null,
                 modifier = Modifier.padding(end = 16.dp)
             )
             Text(
                 text = phone,
+                color = MaterialTheme.colorScheme.onSurface
             )
         }
         Row(
@@ -157,11 +161,13 @@ fun Contacts(phone: String, handle: String, email: String, modifier: Modifier = 
         ) {
             Icon(
                 imageVector = Icons.Rounded.Share,
+                tint = MaterialTheme.colorScheme.primary,
                 contentDescription = null,
                 modifier = Modifier.padding(end = 16.dp)
             )
             Text(
                 text = handle,
+                color = MaterialTheme.colorScheme.onSurface
             )
         }
         Row(
@@ -171,11 +177,13 @@ fun Contacts(phone: String, handle: String, email: String, modifier: Modifier = 
         ) {
             Icon(
                 imageVector = Icons.Rounded.Email,
+                tint = MaterialTheme.colorScheme.primary,
                 contentDescription = null,
                 modifier = Modifier.padding(end = 16.dp)
             )
             Text(
                 text = email,
+                color = MaterialTheme.colorScheme.onSurface
             )
         }
     }
